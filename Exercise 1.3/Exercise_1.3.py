@@ -40,6 +40,10 @@ for i in range(n):
     recipes_list.append(recipe)
 
 for recipe in recipes_list:
+    
+    # Sort the recipes in alphabetical order
+    recipes_list = sorted(recipes_list, key=lambda x: x['name'])
+    
     # Determine difficulty level
     if recipe['cooking_time'] < 10 and len(recipe['ingredients']) < 4:
         difficulty = "Easy"
